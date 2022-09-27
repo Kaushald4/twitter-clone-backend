@@ -12,15 +12,6 @@ const app = express();
 
 //socket io setup
 const server = createServer(app);
-
-app.options(
-    "*",
-    cors({
-        origin: "https://twitterr-clone.netlify.app/",
-        credentials: true,
-    }) as any
-);
-
 const io = new Server(server, {
     cors: { origin: ["http://localhost:5173", "https://twitterr-clone.netlify.app/"] },
 });
@@ -36,13 +27,14 @@ io.on("connection", (socket) => {
     });
 });
 
-//middlewares
-// app.use(
-//     cors({
-//         origin: "https://twitterr-clone.netlify.app/",
-//         credentials: true,
-//     })
-// );
+// middlewares
+app.use(
+    cors({
+        origin: "https://twitterr-clone.netlify.app",
+        credentials: true,
+        preflightContinue: true,
+    })
+);
 app.use(morgan("dev"));
 
 //express middleware
