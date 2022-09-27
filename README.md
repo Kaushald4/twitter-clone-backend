@@ -8,6 +8,8 @@
 
 ![Express](https://img.shields.io/badge/@reduxjs/toolkit-gray)
 
+## Server Deployed On [Render.com](https://render.com)
+
 ## Twitter Deployed [Live Link](#)
 
 ## ReactJS Clinet App Code [Link](#)
