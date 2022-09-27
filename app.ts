@@ -30,7 +30,7 @@ io.on("connection", (socket) => {
 //middlewares
 app.use(
     cors({
-        origin: ["http://localhost:5173", "https://twitterr-clone.netlify.app/"],
+        origin: ["https://twitterr-clone.netlify.app/"],
         credentials: true,
     })
 );
