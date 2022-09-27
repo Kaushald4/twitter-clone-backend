@@ -8,6 +8,7 @@ const sendJwtToken = (user, res) => {
         expires: new Date(Date.now() + cookieTime * 24 * 60 * 60 * 1000),
         httpOnly: true,
         secure: true,
+        SameSite: "None",
     };
     //set token in cookie
     res.status(200)
