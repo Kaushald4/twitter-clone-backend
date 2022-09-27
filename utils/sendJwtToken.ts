@@ -8,7 +8,8 @@ const sendJwtToken = (user: IUserDocument, res: Response) => {
         expires: new Date(Date.now() + cookieTime * 24 * 60 * 60 * 1000),
         httpOnly: true,
         secure: true,
-        SameSite: "None",
+        SameSite: "none",
+        domain: "https://twitterr-clone.netlify.app",
     };
 
     //set token in cookie
