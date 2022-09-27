@@ -17,7 +17,7 @@ const app = (0, express_1.default)();
 const server = (0, http_1.createServer)(app);
 exports.server = server;
 const io = new socket_io_1.Server(server, {
-    cors: { origin: ["http://localhost:5173", "https://twitter-backend.onrender.com/"] },
+    cors: { origin: ["http://localhost:5173", "https://twitterr-clone.netlify.app/"] },
 });
 exports.io = io;
 app.set("io", io);
@@ -30,7 +30,7 @@ io.on("connection", (socket) => {
 });
 //middlewares
 app.use(cors({
-    origin: ["http://localhost:5173", "https://twitter-backend.onrender.com/"],
+    origin: ["http://localhost:5173", "https://twitterr-clone.netlify.app/"],
     credentials: true,
 }));
 app.use((0, morgan_1.default)("dev"));
