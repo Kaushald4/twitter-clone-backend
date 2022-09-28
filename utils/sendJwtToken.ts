@@ -6,7 +6,7 @@ const sendJwtToken = (user: IUserDocument, res: Response) => {
     const cookieTime = parseInt(process.env.COOKIE_TIME as string);
     const options = {
         expires: new Date(Date.now() + cookieTime * 24 * 60 * 60 * 1000),
-        httpOnly: false,
+        httpOnly: true,
         secure: true,
         SameSite: "none",
     };
