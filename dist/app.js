@@ -30,7 +30,11 @@ io.on("connection", (socket) => {
 });
 // middlewares
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: [
+        "https://twitterr-clone.netlify.app",
+        "http://localhost:4173",
+        "http://localhost:5173",
+    ],
     credentials: true,
     preflightContinue: true,
 }));

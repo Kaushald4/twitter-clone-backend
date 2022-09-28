@@ -4,11 +4,6 @@ import { IUserDocument } from "../types/user";
 const sendJwtToken = (user: IUserDocument, res: Response) => {
     const jwtToken = user.createJWTToken();
     const cookieTime = parseInt(process.env.COOKIE_TIME as string);
-    const options = {
-        expires: new Date(Date.now() + cookieTime * 24 * 60 * 60 * 1000),
-        secure: true,
-        SameSite: "None",
-    };
 
     //set token in cookie
     res.status(200)
