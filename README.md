@@ -10,9 +10,9 @@
 
 ## Server Deployed On [Render.com](https://render.com)
 
-## Twitter Deployed [Live Link](#)
+## Twitter Deployed [Live Link](https://twitterr-clone.netlify.app/)
 
-## ReactJS Clinet App Code [Link](#)
+## ReactJS Clinet App Code [Link](https://github.com/Kaushald4/twitter-clone-frontend-)
 
 ## Technologies used in this project
 
