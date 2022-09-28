@@ -12,7 +12,11 @@ const sendJwtToken = (user: IUserDocument, res: Response) => {
 
     //set token in cookie
     res.status(200)
-        .cookie("token", jwtToken, options)
+        .cookie("token", jwtToken, {
+            sameSite: "none",
+            expires: new Date(Date.now() + cookieTime * 24 * 60 * 60 * 1000),
+            secure: true,
+        })
         .json({ status: "success", data: { jwtToken, user } });
 };
 
